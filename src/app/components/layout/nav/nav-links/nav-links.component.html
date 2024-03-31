@@ -1,0 +1,16 @@
+<ul [class]="classes">
+    <li 
+        class="nav-item" 
+        *ngFor="
+            let link of navLinks;
+            trackBy: trackByFn;">
+        <a 
+            class="nav-link text-nowrap position-relative px-0 py-2" 
+            [routerLink]="link.path"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+            <div class="animated-line position-absolute w-100"></div>
+            <span>{{ link.title }}</span>
+        </a>
+    </li>
+</ul>

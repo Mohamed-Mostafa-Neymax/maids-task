@@ -1,0 +1,30 @@
+<nav bgOnScroll class="navbar navbar-expand-lg navbar-light w-100">
+    <div class="container">
+        <a 
+            class="navbar-brand d-block d-lg-none" 
+            routerLink="/">
+            <img src="/assets/images/logo-maids-1.png" alt="maids-logo" width="200" height="69.64">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between " id="navbarSupportedContent">
+            <a class="navbar-brand d-none d-lg-block" routerLink="/">
+                <img src='/assets/images/logo-maids-1.png' alt="maids-logo" width="200" height="69.64">
+            </a>
+            <app-nav-links classes="navbar-nav mb-2 mb-lg-0 p-0 flex-wrap" />
+            <div class="d-flex align-items-center">
+                <mat-form-field appearance="outline" class="mb-3 w-100">
+                    <input 
+                        id="user-id" 
+                        class="w-100" 
+                        type="number"
+                        matInput 
+                        placeholder="Enter user ID" 
+                        (input)="searchHandler($event)">
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</nav>

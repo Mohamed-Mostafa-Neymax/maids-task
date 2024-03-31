@@ -1,0 +1,15 @@
+@import '/src/_variables';
+
+footer {
+    color: $white-color;
+
+    & > div:only-child {
+        background-color: $secondary-color-5;
+        font-size: 1rem;
+        span:not(:only-child) {
+            font-weight: 600;
+        }
+    }
+}
+
+

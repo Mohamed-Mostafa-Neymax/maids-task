@@ -1,0 +1,20 @@
+@import '/src/_variables';
+
+h1 {
+    line-height: 61px;
+    font-weight: 700;
+    font-size: 40px;
+    & > span:first-child {
+        color: $secondary-color-1;
+    }
+    & > span:nth-child(2) {
+        color: $primary-color;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 45px;
+    }
+}

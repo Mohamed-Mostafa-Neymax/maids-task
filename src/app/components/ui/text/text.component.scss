@@ -1,0 +1,25 @@
+@import '/src/_variables';
+
+.bigSizeLowWeight {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.lowSizeBigWeight {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bigSizeMediumWeight {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.gray-1 { color: $gray-color-1; }
+.gray-11 { color: $gray-color-11; }
+.secondary-2 { color: $secondary-color-2; }
+.secondary-3 { color: $secondary-color-3; }
+.secondary-7 { color: $secondary-color-7; }
+.red-color { color: $primary-color; }
+.medium-line-height { line-height: 32px; }
+.big-line-height { line-height: 29.26px; }

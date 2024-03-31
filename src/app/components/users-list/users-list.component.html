@@ -1,0 +1,38 @@
+<section class="py-3 py-md-4 py-lg-5">
+    <div class="py-3 py-md-4 py-lg-5">
+        <div 
+            class="container pt-3 pt-md-4 pt-lg-5">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <app-title-section>
+                        <span blue-text>List of </span>
+                        <span red-text>Users</span>
+                    </app-title-section>
+                </div>
+            </div>
+            <app-loading *ngIf="isLoading"></app-loading>
+            <div class="row" *ngIf="!isLoading">
+                <a 
+                    [routerLink]="['/users', user['id']]"
+                    class="user col-12 col-md-6 col-lg-4 text-center"
+                    *ngFor="let user of users; trackBy: trackByFn;">
+                        <img 
+                            [src]="user.avatar" 
+                            alt="user" 
+                            width="150"
+                            height="150">
+                        <div class="pt-3 pt-lg-4 px-2 px-lg-3 mb-3">
+                            <app-text classes="bigSizeMediumWeight secondary-2 big-line-height">{{ user.first_name + ' ' + user.last_name }}</app-text>
+                            <app-text classes="bigSizeLowWeight gray-1 medium-line-height px-2 px-lg-3 mt-3 mt-lg-4 mb-3 pb-3 mb-lg-5">
+                                email: {{ user.email }}
+                            </app-text>
+                        </div>
+                </a>
+                <app-pagination
+                    *ngIf="!isSearching"
+                    [itemsLength]="12"
+                    [itemsPerPage]="6"></app-pagination>
+            </div>
+        </div>
+    </div>
+</section>
